@@ -9,6 +9,7 @@ The goal is to provide a scaffold of a front-end project with Next.js and Zustan
 - React
 - Zustand
 - TypesScript
+- Tailwind CSS
 - React Testing Library
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
