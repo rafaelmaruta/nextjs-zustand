@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'My Wishlist',
+  title: 'Wishlist',
   description: 'Wishlist for study purposes',
 };
 
