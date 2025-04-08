@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import "./globals.css";
+
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Wishlist",
-  description: "Wishlist for study purposes",
+  title: 'My Wishlist',
+  description: 'Wishlist for study purposes',
 };
 
 export default function RootLayout({
@@ -14,10 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

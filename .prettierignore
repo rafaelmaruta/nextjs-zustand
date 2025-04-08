@@ -1,0 +1,10 @@
+*.svg
+*.svg.vue
+*.html
+*.log
+
+.git
+node_modules
+build
+dist
+public
