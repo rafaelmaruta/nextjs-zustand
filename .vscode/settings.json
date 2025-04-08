@@ -1,0 +1,18 @@
+// NOTE: overwriting this file might override user settings!
+// See https://code.visualstudio.com/docs/getstarted/settings#_settings-precedence
+{
+  // force settings on specific languages
+  "[vue][typescript][javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // fallback for unset languages
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
