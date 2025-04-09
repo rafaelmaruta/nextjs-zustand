@@ -1,4 +1,5 @@
 # nextjs-zustand
+
 A project using Next.js and Zustand
 
 The goal is to provide a scaffold of a front-end project with Next.js and Zustand. Everything is made at client side
@@ -8,7 +9,7 @@ The goal is to provide a scaffold of a front-end project with Next.js and Zustan
 - Next.js
 - React
 - Zustand
-- TypesScript
+- TypeScript
 - Tailwind CSS
 - React Testing Library
 
