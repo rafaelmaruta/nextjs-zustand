@@ -1,11 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-
-import { Breadcrumb } from './components/Breadcrumb';
-import { Header } from './components/Header';
-import { ProductCard } from './components/ProductCard';
-import { WishlistButton } from './components/WishlistButton';
+import { Breadcrumb } from '@/app/components/Breadcrumb';
+import { Header } from '@/app/components/Header';
+import { ProductCard } from '@/app/components/ProductCard';
+import { RemoveButton } from '@/app/components/RemoveButton';
 
 export default function Home() {
   const breadcrumbLinks = [
@@ -14,13 +12,14 @@ export default function Home() {
       href: '/',
       title: 'Home',
     },
+    {
+      label: 'Wishlist',
+      href: '/wishlist',
+      title: 'Wishlist',
+    },
   ];
 
-  const [wishlistButtonState, setWishlistButtonState] = useState<'active' | null>(null);
-
-  const onWishlistButtonClick = () => {
-    setWishlistButtonState('active');
-  };
+  const onRemoveButtonClick = () => {};
 
   return (
     <div>
@@ -33,10 +32,7 @@ export default function Home() {
           fullPrice="39999"
           salePrice="30399"
         >
-          <WishlistButton
-            onClick={onWishlistButtonClick}
-            state={wishlistButtonState}
-          />
+          <RemoveButton onClick={onRemoveButtonClick} />
         </ProductCard>
       </main>
     </div>

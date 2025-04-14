@@ -9,8 +9,8 @@ export const ProductCard = ({
   imageSrc,
   title,
   rating,
-  fullPriceInCents,
-  salePriceInCents,
+  fullPrice,
+  salePrice,
   children,
 }: ProductCardProps) => {
   return (
@@ -27,8 +27,8 @@ export const ProductCard = ({
       <h3>{title}</h3>
       <RatingStars rating={rating} />
       <Price
-        fullPriceInCents={fullPriceInCents}
-        salePriceInCents={salePriceInCents}
+        fullPrice={fullPrice}
+        salePrice={salePrice}
       />
     </div>
   );

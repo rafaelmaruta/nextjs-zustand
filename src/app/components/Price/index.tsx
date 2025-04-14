@@ -1,10 +1,10 @@
 import { PriceProps } from './types';
 
-export const Price = ({ fullPriceInCents, salePriceInCents }: PriceProps) => {
+export const Price = ({ fullPrice, salePrice }: PriceProps) => {
   return (
-    <>
-      <p>{fullPriceInCents}</p>
-      <p>{salePriceInCents}</p>
-    </>
+    <div>
+      <p>{fullPrice}</p>
+      <p>{salePrice}</p>
+    </div>
   );
 };
