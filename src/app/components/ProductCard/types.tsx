@@ -4,7 +4,7 @@ export interface ProductCardProps {
   imageSrc?: string;
   title: string;
   rating?: number;
-  fullPriceInCents: string;
-  salePriceInCents?: string;
+  fullPrice: string;
+  salePrice?: string;
   children?: ReactNode;
 }

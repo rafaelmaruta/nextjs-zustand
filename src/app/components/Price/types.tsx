@@ -1,4 +1,4 @@
 export interface PriceProps {
-  fullPriceInCents: string;
-  salePriceInCents?: string;
+  fullPrice: string;
+  salePrice?: string;
 }

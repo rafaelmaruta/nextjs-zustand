@@ -6,10 +6,11 @@ import { WishlistButtonProps } from './types';
 
 export const WishlistButton = ({ onClick, state = null }: WishlistButtonProps) => {
   return (
-    <Image
-      onClick={onClick}
-      src={Heart}
-      alt={`${Heart}`}
-    />
+    <button onClick={onClick}>
+      <Image
+        src={Heart}
+        alt={`${Heart}`}
+      />
+    </button>
   );
 };
