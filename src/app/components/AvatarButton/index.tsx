@@ -15,7 +15,7 @@ export const AvatarButton = ({ children }: AvatarButtonProps) => {
           alt="Avatar"
         />
       </button>
-      <div className="hidden">{children}</div>
+      <div className="absolute top-0 right-0">{children}</div>
     </>
   );
 };

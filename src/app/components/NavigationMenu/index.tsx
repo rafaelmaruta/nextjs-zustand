@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const Submenu = () => {
+export const NavigationMenu = () => {
   return (
     <menu>
       <ul>

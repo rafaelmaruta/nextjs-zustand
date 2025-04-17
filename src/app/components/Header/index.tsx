@@ -2,20 +2,24 @@
 
 import { AvatarButton } from '@/app/components/AvatarButton';
 import { Logo } from '@/app/components/Logo';
-import { Submenu } from '@/app/components/Submenu';
+import { NavigationMenu } from '@/app/components/NavigationMenu';
 import { WishlistHeaderButton } from '@/app/components/WishlistHeaderButton';
 
 export const Header = () => {
   return (
     <header className="flex w-full justify-center bg-[var(--purple-light)]">
       <div className="flex h-[var(--header-height)] w-full items-center justify-between md:h-[var(--desk-header-height)] md:w-[var(--desk-content-width)]">
-        <Logo />
-        <section className="flex flex-row items-center gap-[40px]">
+        <div className="order-2 md:order-1">
+          <Logo />
+        </div>
+        <div className="order-3 md:right-[80px] md:order-2 md:mr-[80px] md:ml-auto">
           <WishlistHeaderButton />
+        </div>
+        <div className="relative order-1 flex items-center md:order-3">
           <AvatarButton>
-            <Submenu />
+            <NavigationMenu />
           </AvatarButton>
-        </section>
+        </div>
       </div>
     </header>
   );
