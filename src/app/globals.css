@@ -9,6 +9,9 @@
   --gray-light: #8c8c8c;
   --gray-dark: #333333;
   --border-color: #8c8c8c;
+  --header-height: 60px;
+  --desk-header-height: 90px;
+  --desk-content-width: 1130px;
 }
 
 @theme inline {
