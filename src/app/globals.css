@@ -10,8 +10,10 @@
   --gray-dark: #333333;
   --border-color: #8c8c8c;
   --header-height: 60px;
+  --logo-height: 25px;
   --desk-header-height: 90px;
   --desk-content-width: 1130px;
+  --desk-logo-height: 30px;
 }
 
 @theme inline {

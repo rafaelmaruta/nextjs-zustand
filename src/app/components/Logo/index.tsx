@@ -12,6 +12,7 @@ export const Logo = () => {
       <Image
         src={Brand}
         alt="Brand"
+        className="h-[var(--logo-height)] w-auto md:h-[var(--desk-logo-height)]"
       />
     </Link>
   );
