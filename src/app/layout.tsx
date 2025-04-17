@@ -10,6 +10,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Wishlist',
   description: 'Wishlist for study purposes',
+  viewport: 'content="width=device-width, initial-scale=1.0"',
 };
 
 const SourceSans3 = Source_Sans_3({
@@ -38,7 +39,7 @@ export default function RootLayout({
     >
       <body className="font-sans">
         <Header />
-        <main>
+        <main className="h-full">
           <Breadcrumb links={breadcrumbLinks} />
           {children}
         </main>
