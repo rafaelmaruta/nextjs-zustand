@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Source_Sans_3 } from 'next/font/google';
 import type { ReactNode } from 'react';
 
+import { NavigationMenu } from '@/app/components/NavigationMenu';
+
 import { Breadcrumb } from './components/Breadcrumb';
 import { Header } from './components/Header';
 import './globals.css';
@@ -18,6 +20,9 @@ const SourceSans3 = Source_Sans_3({
   variable: '--font-sans',
   display: 'swap',
 });
+
+const centerContent =
+  'flex w-full pr-[var(--content-spacing)] pl-[var(--content-spacing)]  md:w-[var(--desk-content-width)]';
 
 export default function RootLayout({
   children,
@@ -37,11 +42,16 @@ export default function RootLayout({
       lang="en"
       className={SourceSans3.variable}
     >
-      <body className="font-sans">
-        <Header />
-        <main className="h-full">
-          <Breadcrumb links={breadcrumbLinks} />
-          {children}
+      <body className="h-screen font-sans">
+        <Header
+          styleClasses={`${centerContent} h-[var(--header-height)] md:h-[var(--desk-header-height)] items-center justify-between`}
+        />
+        <main className="flex h-full justify-center">
+          <section className={`${centerContent} relative h-full`}>
+            <NavigationMenu />
+            <Breadcrumb links={breadcrumbLinks} />
+            {children}
+          </section>
         </main>
       </body>
     </html>

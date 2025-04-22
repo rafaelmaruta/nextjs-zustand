@@ -2,13 +2,21 @@
 
 import { AvatarButton } from '@/app/components/AvatarButton';
 import { Logo } from '@/app/components/Logo';
-import { NavigationMenu } from '@/app/components/NavigationMenu';
 import { WishlistHeaderButton } from '@/app/components/WishlistHeaderButton';
 
-export const Header = () => {
+import { type HeaderProps } from './types';
+
+export const Header = ({
+  styleClasses,
+  onAvatarMouseOver,
+  onAvatarMouseOut,
+  onAvatarFocus,
+  onAvatarBlur,
+  onAvatarClick,
+}: HeaderProps) => {
   return (
-    <header className="flex w-full justify-center bg-[var(--purple-light)]">
-      <div className="flex h-[var(--header-height)] w-full items-center justify-between md:h-[var(--desk-header-height)] md:w-[var(--desk-content-width)]">
+    <header className="flex w-full justify-center bg-[var(--purple-100)]">
+      <div className={styleClasses}>
         <div className="order-2 md:order-1">
           <Logo />
         </div>
@@ -16,9 +24,13 @@ export const Header = () => {
           <WishlistHeaderButton />
         </div>
         <div className="relative order-1 flex items-center md:order-3">
-          <AvatarButton>
-            <NavigationMenu />
-          </AvatarButton>
+          <AvatarButton
+            onMouseOver={onAvatarMouseOver}
+            onMouseOut={onAvatarMouseOut}
+            onFocus={onAvatarFocus}
+            onBlur={onAvatarBlur}
+            onClick={onAvatarClick}
+          />
         </div>
       </div>
     </header>

@@ -6,16 +6,26 @@ import Avatar from '@/app/assets/icons/Avatar.svg';
 
 import { AvatarButtonProps } from './types';
 
-export const AvatarButton = ({ children }: AvatarButtonProps) => {
+export const AvatarButton = ({
+  onMouseOver,
+  onMouseOut,
+  onFocus,
+  onBlur,
+  onClick,
+}: AvatarButtonProps) => {
   return (
-    <>
-      <button>
-        <Image
-          src={Avatar}
-          alt="Avatar"
-        />
-      </button>
-      <div className="absolute top-0 right-0">{children}</div>
-    </>
+    <button
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onClick={onClick}
+      className="cursor-pointer"
+    >
+      <Image
+        src={Avatar}
+        alt="Avatar"
+      />
+    </button>
   );
 };
