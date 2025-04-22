@@ -8,13 +8,15 @@ export const WishlistHeaderButton = () => {
     <Link
       href="/wishlist"
       title="Wishlist"
-      className="flex flex-row md:gap-[10px]"
+      className="flex flex-row items-center md:gap-[10px]"
     >
       <Image
         src={Heart}
         alt="Heart"
       />{' '}
-      <span className="hidden md:inline">Wishlist</span>
+      <span className="hidden text-(length:--font-size-4) font-bold text-[var(--white)] md:inline">
+        Wishlist
+      </span>
     </Link>
   );
 };
