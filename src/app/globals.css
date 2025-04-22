@@ -6,6 +6,7 @@
   --white: #ffffff;
   --purple-100: #8200ff;
   --purple-200: #5a2d82;
+  --gray-90: #ededed;
   --gray-100: #8c8c8c;
   --gray-200: #333333;
   --border-color-100: #ededed;
@@ -23,6 +24,8 @@
   --font-size-3: 15px;
   --font-size-4: 18px;
   --font-size-5: 20px;
+  --menu-shadow: rgba(0, 0, 0, 0.05);
+  --desk-menu-shadow: rgba(0, 0, 0, 0.25);
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,6 +34,8 @@
     --foreground: #ededed;
     --font-color-100: var(--white);
     --font-color-200: #ededed;
+    --menu-shadow: rgba(255, 255, 255, 0.1);
+    --desk-menu-shadow: rgba(255, 255, 255, 0.25);
   }
 }
 
