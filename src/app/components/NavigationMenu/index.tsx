@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import { useRef, useEffect } from 'react';
 
 import { NavigationMenuProps } from './types';
 
 export const NavigationMenu = ({
   visibility = 'visible',
-  ref,
   onMouseOver,
   onMouseOut,
   onFocus,
   onBlur,
+  onClickOutside,
 }: NavigationMenuProps) => {
   const menuOptions = [
     {
@@ -31,6 +32,24 @@ export const NavigationMenu = ({
 
   const arrow =
     "md:absolute md:before:content-[''] md:before:absolute md:before:right-0 md:before:-translate-x-1/2 md:before:border-l-[12px] md:before:border-r-[12px] md:before:top-[8px] md:before:border-b-[12px] md:before:border-l-transparent md:before:border-r-transparent md:before:border-b-white";
+
+  const ref = useRef<HTMLMenuElement>(null);
+
+  useEffect(() => {
+    if (onClickOutside) {
+      function handleClickOutside(event: MouseEvent) {
+        if (ref.current && !ref.current.contains(event.target as Node) && onClickOutside) {
+          onClickOutside();
+        }
+      }
+
+      document.addEventListener('mouseup', handleClickOutside);
+
+      return () => {
+        document.removeEventListener('mouseup', handleClickOutside);
+      };
+    }
+  });
 
   return (
     <menu
