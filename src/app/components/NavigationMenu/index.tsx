@@ -2,7 +2,14 @@ import Link from 'next/link';
 
 import { NavigationMenuProps } from './types';
 
-export const NavigationMenu = ({ visibility = 'visible' }: NavigationMenuProps) => {
+export const NavigationMenu = ({
+  visibility = 'visible',
+  ref,
+  onMouseOver,
+  onMouseOut,
+  onFocus,
+  onBlur,
+}: NavigationMenuProps) => {
   const menuOptions = [
     {
       href: '/login',
@@ -23,13 +30,18 @@ export const NavigationMenu = ({ visibility = 'visible' }: NavigationMenuProps) 
   ];
 
   const arrow =
-    "md:absolute md:before:content-[''] md:before:absolute md:before:right-0 md:before:-translate-x-1/2 md:before:border-l-[12px] md:before:border-r-[12px] md:before:top-[-12px] md:before:border-b-[12px] md:before:border-l-transparent md:before:border-r-transparent md:before:border-b-white";
+    "md:absolute md:before:content-[''] md:before:absolute md:before:right-0 md:before:-translate-x-1/2 md:before:border-l-[12px] md:before:border-r-[12px] md:before:top-[8px] md:before:border-b-[12px] md:before:border-l-transparent md:before:border-r-transparent md:before:border-b-white";
 
   return (
     <menu
-      className={`${visibility} absolute h-full bg-[var(--background)] pr-[var(--content-spacing)] shadow-[3px_0_4px_var(--menu-shadow)] md:top-[-12px] md:right-[var(--content-spacing)] md:mr-[-8px] md:h-auto md:rounded-[8px] md:pt-[5px] md:pr-[10px] md:pb-[5px] md:pl-[10px] md:shadow-[0_4px_4px_var(--desk-menu-shadow)] ${arrow}`}
+      ref={ref}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      className={`${visibility} absolute h-full md:top-[-32px] md:right-[var(--content-spacing)] md:mr-[-8px] md:h-auto ${arrow}`}
     >
-      <ul className="flex h-full flex-col md:h-auto">
+      <ul className="flex h-full flex-col bg-[var(--background)] pr-[var(--content-spacing)] shadow-[3px_0_4px_var(--menu-shadow)] md:mt-[20px] md:h-auto md:rounded-[8px] md:pt-[5px] md:pr-[10px] md:pb-[5px] md:pl-[10px] md:shadow-[0_4px_4px_var(--desk-menu-shadow)]">
         {menuOptions.map(({ href, text }) => (
           <li
             key={href}
