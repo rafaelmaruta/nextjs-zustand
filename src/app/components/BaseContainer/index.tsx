@@ -2,7 +2,6 @@
 
 import { useState, type ReactNode } from 'react';
 
-import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { Header } from '@/app/components/Header';
 import { NavigationMenu } from '@/app/components/NavigationMenu';
 import { type NavigationMenuProps } from '@/app/components/NavigationMenu/types';
@@ -16,14 +15,6 @@ export const BaseContainer = ({
 }: Readonly<{
   children: ReactNode;
 }>) => {
-  const breadcrumbLinks = [
-    {
-      label: 'Home',
-      href: '/',
-      title: 'Home',
-    },
-  ];
-
   const [menuVisibility, setMenuVisibility] = useState<NavigationMenuProps['visibility']>('hidden');
 
   const setMenuVisible = () => {
@@ -49,8 +40,8 @@ export const BaseContainer = ({
             })}
         styleClasses={`${centerContent} h-[var(--header-height)] md:h-[var(--desk-header-height)] items-center justify-between`}
       />
-      <main className="flex h-full justify-center">
-        <section className={`${centerContent} relative h-full`}>
+      <main className="flex justify-center">
+        <section className={`${centerContent} relative`}>
           <NavigationMenu
             visibility={menuVisibility}
             {...(isMobile()
@@ -65,7 +56,6 @@ export const BaseContainer = ({
                   onBlur: setMenuHidden,
                 })}
           />
-          <Breadcrumb links={breadcrumbLinks} />
           {children}
         </section>
       </main>
