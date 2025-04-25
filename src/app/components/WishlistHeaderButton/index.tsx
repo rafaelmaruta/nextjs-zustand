@@ -14,7 +14,7 @@ export const WishlistHeaderButton = () => {
         src={Heart}
         alt="Heart"
       />{' '}
-      <span className="hidden text-(length:--font-size-4) font-bold text-[var(--white)] md:inline">
+      <span className="hidden text-(length:--font-size-4) font-bold text-[var(--white)] hover:underline md:inline">
         Wishlist
       </span>
     </Link>

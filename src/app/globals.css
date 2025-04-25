@@ -26,6 +26,8 @@
   --font-size-5: 20px;
   --menu-shadow: rgba(0, 0, 0, 0.05);
   --desk-menu-shadow: rgba(0, 0, 0, 0.25);
+  --breadcrumb-font-color: var(--purple-200);
+  --menu-font-color: var(--gray-200);
 }
 
 @media (prefers-color-scheme: light) {
@@ -36,6 +38,8 @@
     --font-color-200: #ededed;
     --menu-shadow: rgba(255, 255, 255, 0.1);
     --desk-menu-shadow: rgba(255, 255, 255, 0.25);
+    --breadcrumb-font-color: var(--purple-100);
+    --menu-font-color: var(--gray-90);
   }
 }
 

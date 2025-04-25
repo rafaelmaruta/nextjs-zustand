@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState, type ReactNode } from 'react';
+import { useCallback, useMemo, useState, type ReactNode } from 'react';
 
 import { Header } from '@/app/components/Header';
 import { NavigationMenu } from '@/app/components/NavigationMenu';
@@ -22,13 +22,15 @@ export const BaseContainer = ({
     setMenuVisibility('hidden');
   }, []);
 
+  const isMobileMemo = useMemo(isMobile, []);
+
   const centerContent =
     'flex w-full pr-[var(--content-spacing)] pl-[var(--content-spacing)]  md:w-[var(--desk-content-width)]';
 
   return (
     <>
       <Header
-        {...(isMobile()
+        {...(isMobileMemo
           ? {
               onAvatarClick: showMenu,
             }
@@ -44,7 +46,7 @@ export const BaseContainer = ({
         <section className={`${centerContent} relative flex-col`}>
           <NavigationMenu
             visibility={menuVisibility}
-            {...(isMobile()
+            {...(isMobileMemo
               ? {
                   onClickOutside: hideMenu,
                   onClick: showMenu,
