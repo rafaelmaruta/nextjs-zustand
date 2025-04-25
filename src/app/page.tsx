@@ -13,18 +13,9 @@ export default function Home() {
     setWishlistButtonState('active');
   };
 
-  const breadcrumbLinks = [
-    {
-      label: 'Home',
-      href: '/',
-      title: 'Home',
-      className: '',
-    },
-  ];
-
   return (
     <>
-      <Breadcrumb links={breadcrumbLinks} />
+      <Breadcrumb />
       <section>
         <ProductCard
           imageSrc="https://static.netshoes.com.br/produtos/tenis-nike-revolution-7-feminino/26/JD8-6363-026/JD8-6363-026_zoom1.jpg?ts=1708096757?ims=544x"
