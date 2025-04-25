@@ -9,37 +9,40 @@
   --gray-90: #ededed;
   --gray-100: #8c8c8c;
   --gray-200: #333333;
-  --border-color-100: #ededed;
-  --border-color-200: var(--gray-100);
-  --header-height: 60px;
-  --logo-height: 25px;
-  --desk-header-height: 90px;
-  --desk-content-width: 1130px;
-  --desk-logo-height: 30px;
-  --content-spacing: 20px;
-  --font-color-100: var(--gray-100);
-  --font-color-200: var(--gray-200);
   --font-size-1: 12px;
   --font-size-2: 14px;
   --font-size-3: 15px;
   --font-size-4: 18px;
   --font-size-5: 20px;
+  --font-color-100: var(--gray-100);
+  --font-color-200: var(--gray-200);
+  --border-color-100: var(--gray-90);
+  --border-color-200: var(--gray-100);
+
+  --header-height: 60px;
+  --desk-header-height: 90px;
+  --breadcrumb-height: 40px;
+  --desk-breadcrumb-height: 70px;
+  --logo-height: 25px;
+  --desk-logo-height: 30px;
+  --desk-content-width: 1130px;
+  --content-spacing: 20px;
+  --menu-font-color: var(--gray-200);
   --menu-shadow: rgba(0, 0, 0, 0.05);
   --desk-menu-shadow: rgba(0, 0, 0, 0.25);
   --breadcrumb-font-color: var(--purple-200);
-  --menu-font-color: var(--gray-200);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: var(--gray-90);
     --font-color-100: var(--white);
-    --font-color-200: #ededed;
+    --font-color-200: var(--gray-90);
+    --menu-font-color: var(--gray-90);
     --menu-shadow: rgba(255, 255, 255, 0.1);
     --desk-menu-shadow: rgba(255, 255, 255, 0.25);
     --breadcrumb-font-color: var(--purple-100);
-    --menu-font-color: var(--gray-90);
   }
 }
 
