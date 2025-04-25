@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { Breadcrumb } from './components/Breadcrumb';
 import { ProductCard } from './components/ProductCard';
@@ -9,9 +9,9 @@ import { WishlistButton } from './components/WishlistButton';
 export default function Home() {
   const [wishlistButtonState, setWishlistButtonState] = useState<'active' | null>(null);
 
-  const onWishlistButtonClick = () => {
+  const onWishlistButtonClick = useCallback(() => {
     setWishlistButtonState('active');
-  };
+  }, []);
 
   return (
     <>

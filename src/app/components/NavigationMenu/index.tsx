@@ -32,7 +32,7 @@ export const NavigationMenu = ({
         document.removeEventListener('mouseup', handleClickOutside);
       };
     }
-  });
+  }, [visibility, onClickOutside]);
 
   return (
     <menu
@@ -50,7 +50,7 @@ export const NavigationMenu = ({
             className="border-b-[1px] border-[var(--border-color-100)] md:border-0"
           >
             <Link
-              className="block pt-[10px] pb-[10px] text-[length:var(--font-size-3)] text-[var(--gray-200)] md:pt-[5px] md:pb-[5px] md:hover:underline"
+              className="block pt-[10px] pb-[10px] text-[length:var(--font-size-3)] text-[var(--menu-font-color)] md:pt-[5px] md:pb-[5px] md:hover:underline"
               href={href}
               title={text}
             >

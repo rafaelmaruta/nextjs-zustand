@@ -6,7 +6,7 @@ export const Breadcrumb = () => {
   const pathname = usePathname();
 
   const formatLabelBasedOnPathname = useCallback((pathname: string) => {
-    return pathname.replace(/\s/g, '-').replace('/', '/ ');
+    return pathname.replace(/\s/g, '-').replace('/', '');
   }, []);
 
   const links = useMemo(() => {
@@ -27,7 +27,7 @@ export const Breadcrumb = () => {
           {
             label: formatLabelBasedOnPathname(pathname),
             href: pathname,
-            className: 'font-bold ml-[4px]',
+            className: 'font-bold',
           },
         ];
   }, [pathname, formatLabelBasedOnPathname]);
@@ -35,10 +35,14 @@ export const Breadcrumb = () => {
   return (
     <section className="pt-[10px] pb-[10px] md:border-b-[1px] md:border-[var(--border-color-200)] md:pt-[var(--content-spacing)] md:pb-[var(--content-spacing)]">
       <ul className="flex">
-        {links.map(({ label, href, className }) => (
-          <li key={label}>
+        {links.map(({ label, href, className }, index) => (
+          <li
+            key={label}
+            className="text-[var(--breadcrumb-font-color)]"
+          >
+            {index !== 0 && <span>&nbsp;/&nbsp;</span>}
             <Link
-              className={`${className} text-[var(--purple-200)] capitalize`}
+              className={`${className} capitalize hover:underline`}
               href={href}
               title={label}
             >
