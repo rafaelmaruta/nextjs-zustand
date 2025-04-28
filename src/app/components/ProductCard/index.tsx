@@ -14,22 +14,26 @@ export const ProductCard = ({
   children,
 }: ProductCardProps) => {
   return (
-    <div>
-      <div>{children}</div>
+    <div className="relative h-[292px] w-[220px] rounded-[5px] p-[15px] shadow-[3px_1px_6px_var(--card-shadow)]">
+      <div className="absolute top-[10px] right-[10px]">{children}</div>
       {imageSrc && (
         <Image
           src={imageSrc}
           alt={title}
-          width={100}
-          height={150}
+          width={212}
+          height={151}
         />
       )}
-      <h3>{title}</h3>
-      <RatingStars rating={rating} />
-      <Price
-        fullPrice={fullPrice}
-        salePrice={salePrice}
-      />
+      <h3 className="mt-[5px]">{title}</h3>
+      <div className="mt-[7px]">
+        <RatingStars rating={rating} />
+      </div>
+      <div className="mt-[7px]">
+        <Price
+          fullPrice={fullPrice}
+          salePrice={salePrice}
+        />
+      </div>
     </div>
   );
 };

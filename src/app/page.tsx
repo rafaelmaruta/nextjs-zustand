@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Breadcrumb />
-      <section>
+      <section className="mt-[var(--content-spacing)]">
         <ProductCard
           imageSrc="https://static.netshoes.com.br/produtos/tenis-nike-revolution-7-feminino/26/JD8-6363-026/JD8-6363-026_zoom1.jpg?ts=1708096757?ims=544x"
           title="Tênis Nike Revolution 7 Feminino - Preto+Branco"
