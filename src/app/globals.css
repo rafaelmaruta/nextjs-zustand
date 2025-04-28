@@ -31,6 +31,7 @@
   --menu-shadow: rgba(0, 0, 0, 0.05);
   --desk-menu-shadow: rgba(0, 0, 0, 0.25);
   --breadcrumb-font-color: var(--purple-200);
+  --card-shadow: rgba(0, 0, 0, 0.25);
 }
 
 @media (prefers-color-scheme: light) {
