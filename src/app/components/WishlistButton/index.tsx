@@ -1,15 +1,21 @@
 import Image from 'next/image';
 
-import Heart from '@/app/assets/icons/Heart.svg';
+import HeartBold from '@/app/assets/icons/HeartBold.svg';
 
 import { WishlistButtonProps } from './types';
 
-export const WishlistButton = ({ onClick, state = null }: WishlistButtonProps) => {
+export const WishlistButton = ({ onClick, isFavorited = false }: WishlistButtonProps) => {
+  const heartColor = isFavorited ? 'bg-[#FF0000]' : 'bg-[#8C8C8C]';
+
   return (
-    <button onClick={onClick}>
+    <button
+      className={`flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full ${heartColor}`}
+      onClick={onClick}
+    >
       <Image
-        src={Heart}
-        alt={`${Heart}`}
+        src={HeartBold}
+        alt={`${HeartBold}`}
+        className="mt-[2px]"
       />
     </button>
   );
