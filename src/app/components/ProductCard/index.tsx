@@ -14,7 +14,7 @@ export const ProductCard = ({
   children,
 }: ProductCardProps) => {
   return (
-    <div className="relative h-[292px] w-[220px] rounded-[5px] p-[15px] shadow-[3px_1px_6px_var(--card-shadow)]">
+    <div className="relative h-[333px] w-[220px] rounded-[5px] p-[15px] shadow-[3px_1px_6px_var(--card-shadow)]">
       <div className="absolute top-[10px] right-[10px]">{children}</div>
       {imageSrc && (
         <Image
@@ -24,7 +24,7 @@ export const ProductCard = ({
           height={151}
         />
       )}
-      <h3 className="mt-[5px]">{title}</h3>
+      <h3 className="mt-[7px] block h-[40px] overflow-hidden leading-5">{title}</h3>
       <div className="mt-[7px]">
         <RatingStars rating={rating} />
       </div>
