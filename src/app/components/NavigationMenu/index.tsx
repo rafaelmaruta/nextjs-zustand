@@ -21,8 +21,8 @@ export const NavigationMenu = ({
   useEffect(() => {
     if (onClickOutside) {
       function handleClickOutside(event: MouseEvent) {
-        if (ref.current && !ref.current.contains(event.target as Node) && onClickOutside) {
-          onClickOutside();
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          onClickOutside?.();
         }
       }
 
