@@ -11,11 +11,12 @@ const STAR_SIZE = 'h-[13px] w-[13px]';
 const STAR_SCALE = 'w-[1000%]';
 
 export const RatingStars = ({ rating = 0 }: RatingStarsProps) => {
-  let countRating = rating;
+  const normalizedRating = Math.min(rating, 5);
+  let countRating = normalizedRating;
 
   const Stars = useMemo(
     () =>
-      Array.from({ length: Math.ceil(rating) })
+      Array.from({ length: 5 })
         .map(() => countRating--)
         .map((count) => {
           if (count >= 1) {
@@ -71,7 +72,7 @@ export const RatingStars = ({ rating = 0 }: RatingStarsProps) => {
             );
           }
         }),
-    [countRating, rating],
+    [countRating],
   );
 
   return (

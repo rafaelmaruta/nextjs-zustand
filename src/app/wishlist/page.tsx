@@ -16,7 +16,7 @@ export default function Wishlist() {
         <ProductCard
           imageSrc="https://static.netshoes.com.br/produtos/tenis-nike-revolution-7-feminino/26/JD8-6363-026/JD8-6363-026_zoom1.jpg?ts=1708096757?ims=544x"
           title="Tênis Nike Revolution 7 Feminino - Preto+Branco"
-          rating={3.2}
+          rating={4.2}
           fullPrice={centsToReais(+'39999')}
           salePrice={centsToReais(+'30399')}
         >
