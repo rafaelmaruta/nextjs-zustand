@@ -5,6 +5,7 @@ import { useCallback, useState } from 'react';
 import { Breadcrumb } from './components/Breadcrumb';
 import { ProductCard } from './components/ProductCard';
 import { WishlistButton } from './components/WishlistButton';
+import { centsToReais } from './utils/centsToReais';
 
 export default function Home() {
   const [wishlistButtonState, setWishlistButtonState] = useState<boolean>(false);
@@ -21,8 +22,8 @@ export default function Home() {
           imageSrc="https://static.netshoes.com.br/produtos/tenis-nike-revolution-7-feminino/26/JD8-6363-026/JD8-6363-026_zoom1.jpg?ts=1708096757?ims=544x"
           title="Tênis Nike Revolution 7 Feminino - Preto+Branco"
           rating={4.1}
-          fullPrice="39999"
-          salePrice="30399"
+          fullPrice={centsToReais(+'39999')}
+          salePrice={centsToReais(+'30399')}
         >
           <WishlistButton
             onClick={onWishlistButtonClick}
