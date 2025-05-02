@@ -11,8 +11,7 @@ const STAR_SIZE = 'h-[13px] w-[13px]';
 const STAR_SCALE = 'w-[1000%]';
 
 export const RatingStars = ({ rating = 0 }: RatingStarsProps) => {
-  const normalizedRating = Math.min(rating, 5);
-  let countRating = normalizedRating;
+  let countRating = Math.min(rating, 5);
 
   const Stars = useMemo(
     () =>
