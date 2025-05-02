@@ -6,7 +6,10 @@ import { RemoveButtonProps } from './types';
 
 export const RemoveButton = ({ onClick }: RemoveButtonProps) => {
   return (
-    <button onClick={onClick}>
+    <button
+      onClick={onClick}
+      className="cursor-pointer"
+    >
       <Image
         src={Close}
         alt={`${Close}`}
