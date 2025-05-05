@@ -32,9 +32,10 @@
   --desk-menu-shadow: rgba(0, 0, 0, 0.25);
   --breadcrumb-font-color: var(--purple-200);
   --card-shadow: rgba(0, 0, 0, 0.25);
+  --price-font-color: var(--purple-200);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: var(--gray-90);
@@ -44,6 +45,7 @@
     --menu-shadow: rgba(255, 255, 255, 0.1);
     --desk-menu-shadow: rgba(255, 255, 255, 0.25);
     --breadcrumb-font-color: var(--purple-100);
+    --price-font-color: var(--purple-100);
   }
 }
 
