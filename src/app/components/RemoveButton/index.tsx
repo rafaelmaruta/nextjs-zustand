@@ -8,7 +8,7 @@ export const RemoveButton = ({ onClick }: RemoveButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className="cursor-pointer"
+      className="flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-[var(--gray-90)]"
     >
       <Image
         src={Close}
