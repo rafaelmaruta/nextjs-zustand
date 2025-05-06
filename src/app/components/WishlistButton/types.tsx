@@ -1,4 +1,4 @@
-export interface WishlistButtonProps {
+export type WishlistButtonProps = {
   onClick: () => void;
   isFavorited?: boolean;
-}
+};

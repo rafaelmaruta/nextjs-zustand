@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import Avatar from '@/app/assets/icons/Avatar.svg';
 
-import { AvatarButtonProps } from './types';
+import { type AvatarButtonProps } from './types';
 
 export const AvatarButton = ({
   onMouseOver,

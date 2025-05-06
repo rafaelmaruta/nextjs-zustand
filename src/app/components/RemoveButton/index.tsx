@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Close from '@/app/assets/icons/Close.svg';
 
-import { RemoveButtonProps } from './types';
+import { type RemoveButtonProps } from './types';
 
 export const RemoveButton = ({ onClick }: RemoveButtonProps) => {
   return (

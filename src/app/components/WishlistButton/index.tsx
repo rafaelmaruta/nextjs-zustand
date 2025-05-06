@@ -1,17 +1,25 @@
 import Image from 'next/image';
-import { useMemo } from 'react';
+import { memo, useMemo, useCallback, MouseEvent } from 'react';
 
 import HeartBold from '@/app/assets/icons/HeartBold.svg';
 
-import { WishlistButtonProps } from './types';
+import { type WishlistButtonProps } from './types';
 
-export const WishlistButton = ({ onClick, isFavorited = false }: WishlistButtonProps) => {
+export const WishlistButton = memo(({ onClick, isFavorited = false }: WishlistButtonProps) => {
+  const handleClick = useCallback(
+    (e: MouseEvent) => {
+      e.preventDefault();
+      onClick?.();
+    },
+    [onClick],
+  );
+
   const heartColor = useMemo(() => (isFavorited ? 'bg-[#FF0000]' : 'bg-[#8C8C8C]'), [isFavorited]);
 
   return (
     <button
       className={`flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full ${heartColor}`}
-      onClick={onClick}
+      onClick={handleClick}
     >
       <Image
         src={HeartBold}
@@ -20,4 +28,6 @@ export const WishlistButton = ({ onClick, isFavorited = false }: WishlistButtonP
       />
     </button>
   );
-};
+});
+
+WishlistButton.displayName = 'WishlistButton';

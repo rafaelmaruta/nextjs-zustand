@@ -3,7 +3,7 @@
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { ProductCard } from '@/app/components/ProductCard';
 import { RemoveButton } from '@/app/components/RemoveButton';
-import { OUTER_PAGE_CLASSES, INNER_PAGE_CLASSES } from '@/app/styles/constants';
+import { OUTER_PAGE_CLASSES, INNER_PAGE_CLASSES } from '@/app/constants/styles';
 import { centsToReais } from '@/app/utils/centsToReais';
 
 export default function Wishlist() {
@@ -15,6 +15,7 @@ export default function Wishlist() {
       <section className={OUTER_PAGE_CLASSES}>
         <div className={INNER_PAGE_CLASSES}>
           <ProductCard
+            sku="000"
             imageSrc="https://static.netshoes.com.br/produtos/tenis-nike-revolution-7-feminino/26/JD8-6363-026/JD8-6363-026_zoom1.jpg?ts=1708096757?ims=544x"
             title="Tênis Nike Revolution 7 Feminino - Preto+Branco"
             rating={4.2}

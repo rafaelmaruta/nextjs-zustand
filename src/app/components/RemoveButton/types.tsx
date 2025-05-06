@@ -1,3 +1,3 @@
-export interface RemoveButtonProps {
+export type RemoveButtonProps = {
   onClick: () => void;
-}
+};
