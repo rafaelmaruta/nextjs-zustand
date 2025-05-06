@@ -1,4 +1,4 @@
-export interface PriceProps {
+export type PriceProps = {
   fullPrice: string;
   salePrice?: string;
-}
+};

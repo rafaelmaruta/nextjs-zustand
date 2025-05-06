@@ -3,9 +3,10 @@ import Image from 'next/image';
 import { Price } from '@/app/components/Price';
 import { RatingStars } from '@/app/components/RatingStars';
 
-import { ProductCardProps } from './types';
+import { type ProductCardProps } from './types';
 
 export const ProductCard = ({
+  sku,
   imageSrc,
   title,
   rating,
@@ -14,7 +15,10 @@ export const ProductCard = ({
   children,
 }: ProductCardProps) => {
   return (
-    <div className="relative h-[335px] w-[220px] rounded-[5px] p-[15px] shadow-[3px_1px_6px_var(--card-shadow)]">
+    <article
+      aria-label={`Product: ${title} ${sku}`}
+      className="relative h-[335px] w-[220px] rounded-[5px] p-[15px] shadow-[3px_1px_6px_var(--card-shadow)]"
+    >
       <div className="absolute top-[10px] right-[10px]">{children}</div>
       {imageSrc && (
         <Image
@@ -34,6 +38,6 @@ export const ProductCard = ({
           salePrice={salePrice}
         />
       </div>
-    </div>
+    </article>
   );
 };

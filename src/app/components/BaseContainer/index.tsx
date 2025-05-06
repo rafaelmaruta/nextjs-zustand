@@ -1,20 +1,18 @@
 'use client';
 
-import { useCallback, useMemo, useState, type ReactNode } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import { Header } from '@/app/components/Header';
 import { NavigationMenu } from '@/app/components/NavigationMenu';
 import { type NavigationMenuProps } from '@/app/components/NavigationMenu/types';
 import { isMobile } from '@/app/utils/isMobile';
 
+import { type BaseContainerProps } from './types';
+
 const CENTER_CONTENT =
   'flex w-full pr-[var(--content-spacing)] pl-[var(--content-spacing)]  md:w-[var(--desk-content-width)]';
 
-export const BaseContainer = ({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) => {
+export const BaseContainer = ({ children }: Readonly<BaseContainerProps>) => {
   const [menuVisibility, setMenuVisibility] = useState<NavigationMenuProps['visibility']>('hidden');
 
   const showMenu = useCallback(() => {

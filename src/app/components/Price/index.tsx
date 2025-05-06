@@ -1,4 +1,4 @@
-import { PriceProps } from './types';
+import { type PriceProps } from './types';
 
 export const Price = ({ fullPrice, salePrice }: PriceProps) => {
   return (

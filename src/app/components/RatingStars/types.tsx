@@ -1,3 +1,4 @@
-export interface RatingStarsProps {
+export type RatingStarsProps = {
   rating?: number;
-}
+  maxSize?: number;
+};
