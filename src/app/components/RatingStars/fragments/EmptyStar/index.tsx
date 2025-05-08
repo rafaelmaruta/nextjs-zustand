@@ -4,11 +4,8 @@ import Star from '@/app/assets/icons/Star.svg';
 
 import { type EmptyStarProps } from './types';
 
-export const EmptyStar = ({ key, starSize }: EmptyStarProps) => (
-  <div
-    key={key}
-    className={starSize}
-  >
+export const EmptyStar = ({ starSize }: EmptyStarProps) => (
+  <div className={starSize}>
     <Image
       src={Star}
       alt="empty star"
