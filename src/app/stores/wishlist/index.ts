@@ -4,11 +4,12 @@ import { combine, devtools, persist } from 'zustand/middleware';
 export const useWishlistStore = create(
   devtools(
     persist(
-      combine({ items: [] as string[] }, (set) => ({
-        addItem: (sku: string) => set((state) => ({ items: [...state.items, sku] })),
-        removeItem: (sku: string) =>
+      combine({ items: [] as string[] }, (set, get) => ({
+        isInWishlist: (code: string) => get().items.some((item) => item === code),
+        addItem: (code: string) => set((state) => ({ items: [...state.items, code] })),
+        removeItem: (code: string) =>
           set((state) => ({
-            items: state.items.filter((item) => item !== sku),
+            items: state.items.filter((item) => item !== code),
           })),
       })),
       { name: 'wishlistStore' },

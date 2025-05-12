@@ -7,16 +7,23 @@ import { ProductCard } from './components/ProductCard';
 import { WishlistButton } from './components/WishlistButton';
 import { OUTER_PAGE_CLASSES, INNER_PAGE_CLASSES } from './constants/styles';
 import { useProductsStore } from './stores/products';
+import { useWishlistStore } from './stores/wishlist';
 import { centsToReais } from './utils/centsToReais';
 
 export default function Home() {
-  const [wishlistButtonState, setWishlistButtonState] = useState<boolean>(false);
-
+  const { isInWishlist, addItem, removeItem } = useWishlistStore();
   const { result, getProducts } = useProductsStore();
 
-  const onWishlistButtonClick = useCallback(() => {
-    setWishlistButtonState(true);
-  }, []);
+  const onWishlistButtonClick = useCallback(
+    (code: string) => () => {
+      if (isInWishlist(code)) {
+        removeItem(code);
+      } else {
+        addItem(code);
+      }
+    },
+    [isInWishlist, addItem, removeItem],
+  );
 
   useEffect(() => {
     getProducts();
@@ -38,8 +45,8 @@ export default function Home() {
               salePrice={centsToReais(+product.salePriceInCents)}
             >
               <WishlistButton
-                onClick={onWishlistButtonClick}
-                isFavorited={wishlistButtonState}
+                onClick={onWishlistButtonClick(product.code)}
+                isFavorited={isInWishlist(product.code)}
               />
             </ProductCard>
           ))}
