@@ -3,7 +3,7 @@
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { ProductCard } from '@/app/components/ProductCard';
 import { RemoveButton } from '@/app/components/RemoveButton';
-import { OUTER_PAGE_CLASSES, INNER_PAGE_CLASSES } from '@/app/constants/styles';
+import { INNER_PAGE_CLASSES, OUTER_PAGE_CLASSES } from '@/app/constants/styles';
 import { centsToReais } from '@/app/utils/centsToReais';
 
 export default function Wishlist() {

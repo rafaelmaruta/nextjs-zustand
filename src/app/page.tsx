@@ -1,11 +1,11 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect } from 'react';
 
 import { Breadcrumb } from './components/Breadcrumb';
 import { ProductCard } from './components/ProductCard';
 import { WishlistButton } from './components/WishlistButton';
-import { OUTER_PAGE_CLASSES, INNER_PAGE_CLASSES } from './constants/styles';
+import { INNER_PAGE_CLASSES, OUTER_PAGE_CLASSES } from './constants/styles';
 import { useProductsStore } from './stores/products';
 import { useWishlistStore } from './stores/wishlist';
 import { centsToReais } from './utils/centsToReais';

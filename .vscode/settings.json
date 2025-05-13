@@ -2,7 +2,7 @@
 // See https://code.visualstudio.com/docs/getstarted/settings#_settings-precedence
 {
   // force settings on specific languages
-  "[vue][typescript][javascript]": {
+  "[vue][typescript][javascript][typescriptreact]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     },
