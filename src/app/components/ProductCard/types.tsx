@@ -7,6 +7,7 @@ export type ProductCardProps = {
   rating?: number;
   fullPrice: string;
   salePrice?: string;
+  stockAvailable: boolean;
   children?: ReactNode;
   onImageError?: () => void;
 };

@@ -41,6 +41,7 @@ export default function Wishlist() {
                 rating={product.rating}
                 fullPrice={centsToReais(+product.fullPriceInCents)}
                 salePrice={centsToReais(+product.salePriceInCents)}
+                stockAvailable={product.stockAvailable}
               >
                 <RemoveButton onClick={onRemoveButtonClick(product.code)} />
               </ProductCard>

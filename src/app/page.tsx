@@ -43,11 +43,14 @@ export default function Home() {
               rating={product.rating}
               fullPrice={centsToReais(+product.fullPriceInCents)}
               salePrice={centsToReais(+product.salePriceInCents)}
+              stockAvailable={product.stockAvailable}
             >
-              <WishlistButton
-                onClick={onWishlistButtonClick(product.code)}
-                isFavorited={isInWishlist(product.code)}
-              />
+              {product.stockAvailable && (
+                <WishlistButton
+                  onClick={onWishlistButtonClick(product.code)}
+                  isFavorited={isInWishlist(product.code)}
+                />
+              )}
             </ProductCard>
           ))}
         </div>
