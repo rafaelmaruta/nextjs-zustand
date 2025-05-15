@@ -37,7 +37,7 @@ git clone https://github.com/yourusername/nextjs-zustand.git
 cd nextjs-zustand
 
 # Install dependencies
-npm install
+pnpm install
 ```
 
 ## Development
@@ -45,13 +45,7 @@ npm install
 Start the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
