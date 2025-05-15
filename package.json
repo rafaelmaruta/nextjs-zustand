@@ -5,6 +5,10 @@
   "private": true,
   "author": "Rafael Maruta <rafaelmaruta@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "23.x",
+    "pnpm": ">=8.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rafaelmaruta/nextjs-zustand.git"

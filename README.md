@@ -16,8 +16,8 @@ A modern front-end scaffold built with Next.js and Zustand for efficient state m
 
 ### Tech Stack
 
-- **Runtime Environment**: Node.js v23.6.0
-- **Package Manager**: NPM 10.9.2
+- **Runtime Environment**: Node.js v23.6.x
+- **Package Manager**: pnpm >= 8.5.1
 - **Framework**: Next.js with App Router
 - **UI Library**: React
 - **State Management**: Zustand
