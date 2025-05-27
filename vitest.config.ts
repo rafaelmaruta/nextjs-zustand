@@ -5,8 +5,9 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: 'jest-dom',
+    environment: 'happy-dom',
     globals: true,
+    setupFiles: './src/test/setupTests.ts',
     css: false,
   },
   resolve: {
