@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { memo, useMemo, useCallback, MouseEvent } from 'react';
+import { memo, MouseEvent, useCallback, useMemo } from 'react';
 
 import HeartBold from '@/app/assets/icons/HeartBold.svg';
 
@@ -23,7 +23,7 @@ export const WishlistButton = memo(({ onClick, isFavorited = false }: WishlistBu
     >
       <Image
         src={HeartBold}
-        alt={`${HeartBold}`}
+        alt="Wishlist"
         className="mt-[2px]"
       />
     </button>

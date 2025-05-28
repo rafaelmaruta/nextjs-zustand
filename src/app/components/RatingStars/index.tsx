@@ -45,7 +45,10 @@ export const RatingStars = ({ rating = 0, maxSize = 5 }: RatingStarsProps) => {
   );
 
   return (
-    <div className="flex items-center">
+    <div
+      className="flex items-center"
+      data-testid="RatingStars"
+    >
       <div className="flex">{renderStars}</div>
       <span className="ml-[5px] text-[length:var(--font-size-1)]">{rating.toFixed(1)}</span>
     </div>

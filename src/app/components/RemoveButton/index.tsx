@@ -13,6 +13,8 @@ export const RemoveButton = ({ onClick }: RemoveButtonProps) => {
       <Image
         src={Close}
         alt={`${Close}`}
+        height={30}
+        width={30}
       />
     </button>
   );

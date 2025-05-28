@@ -25,6 +25,8 @@ export const AvatarButton = ({
       <Image
         src={Avatar}
         alt="Avatar"
+        height="30"
+        width="30"
       />
     </button>
   );

@@ -33,7 +33,10 @@ export const Breadcrumb = () => {
   }, [pathname, formatLabelBasedOnPathname]);
 
   return (
-    <section className="flex h-[var(--breadcrumb-height)] items-center md:h-[var(--desk-breadcrumb-height)] md:border-b-[1px] md:border-[var(--border-color-200)]">
+    <section
+      className="flex h-[var(--breadcrumb-height)] items-center md:h-[var(--desk-breadcrumb-height)] md:border-b-[1px] md:border-[var(--border-color-200)]"
+      role="navigation"
+    >
       <ul className="flex">
         {links.map(({ label, href, className }, index) => (
           <li

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { MENU_ITEMS } from '@/app/constants/menuItems';
 
@@ -9,7 +9,7 @@ const ARROW =
   "md:absolute md:before:content-[''] md:before:absolute md:before:right-0 md:before:-translate-x-1/2 md:before:border-l-[12px] md:before:border-r-[12px] md:before:top-[8px] md:before:border-b-[12px] md:before:border-l-transparent md:before:border-r-transparent md:before:border-b-[var(--background)]";
 
 export const NavigationMenu = ({
-  visibility = 'visible',
+  visibility = 'hidden',
   onMouseOver,
   onMouseOut,
   onFocus,
@@ -37,6 +37,7 @@ export const NavigationMenu = ({
   return (
     <menu
       ref={ref}
+      role="navigation"
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
       onFocus={onFocus}

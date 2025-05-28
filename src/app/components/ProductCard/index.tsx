@@ -19,15 +19,18 @@ export const ProductCard = ({
     <article
       aria-label={`Product: ${title} ${sku}`}
       className={`relative h-[335px] w-[220px] rounded-[5px] p-[15px] shadow-[3px_1px_6px_var(--card-shadow)] ${stockAvailable ? '' : 'opacity-50'}`}
+      data-testid="ProductCard"
     >
       <div className="absolute top-[10px] right-[10px]">{children}</div>
       {imageSrc && (
-        <Image
-          src={imageSrc}
-          alt={title}
-          width={212}
-          height={151}
-        />
+        <figure>
+          <Image
+            src={imageSrc}
+            alt={title}
+            width={212}
+            height={151}
+          />
+        </figure>
       )}
       <h3 className="mt-[7px] block h-[40px] overflow-hidden leading-5">{title}</h3>
       <div className="mt-[5px]">

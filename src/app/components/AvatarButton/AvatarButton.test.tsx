@@ -11,10 +11,6 @@ vi.mock('next/image', () => ({
   ),
 }));
 
-vi.mock('@/app/assets/icons/Avatar.svg', () => ({
-  default: '/mocked/avatar.svg',
-}));
-
 describe('AvatarButton', () => {
   it('should render the avatar button correctly', () => {
     render(<AvatarButton />);
